@@ -10,6 +10,8 @@ const mockUser = {
     preferences:['movies', 'comics']
 };
 
+console.log('Mock user payload:', mockUser);
+
 let token = '';
 
 // Auth tests
