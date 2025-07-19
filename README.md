@@ -1,11 +1,11 @@
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=19939128&assignment_repo_type=AssignmentRepo)
 
 
-News Aggregator API
+**News Aggregator API**
 Project Overview
 This is a RESTful API for a personalized news aggregator. It allows users to register, log in, manage their news preferences, and fetch personalized news articles from an external news API. The project emphasizes robust API development practices, including authentication, input validation, error handling, and caching.
 
-Features
+**Features**
 This API provides the following functionalities:
 
 User Authentication:
@@ -28,7 +28,7 @@ Integrates with an external News API (NewsAPI.org) to fetch articles.
 
 Fetches news articles tailored to the logged-in user's preferences.
 
-Robustness:
+**Robustness**:
 
 Implements input validation for user registration and preferences.
 
@@ -36,9 +36,9 @@ Comprehensive error handling for invalid inputs, unauthorized access, and extern
 
 Performance & Management (Optional Extensions Implemented):
 
-Caching Mechanism: Caches fetched news articles using Redis to reduce external API calls and improve response times.
+**Caching Mechanism**: Caches fetched news articles using Redis to reduce external API calls and improve response times.
 
-Article Management:
+**Article Management**:
 
 Mark news articles as read.
 
@@ -48,58 +48,40 @@ Retrieve all read articles for a user.
 
 Retrieve all favorite articles for a user.
 
-Search Functionality: Search for news articles based on keywords.
+**Search Functionality**: Search for news articles based on keywords.
 
-Periodic Cache Updates: Simulates real-time aggregation by periodically refreshing cached news articles in the background.
+**Periodic Cache Updates**: Simulates real-time aggregation by periodically refreshing cached news articles in the background.
 
-Technologies Used
-The News Aggregator API is built using the following technologies:
-
+**Technologies Used**
 Node.js: JavaScript runtime environment.
-
 Express.js: Web application framework for Node.js.
-
 MongoDB: NoSQL database for data storage (via Mongoose).
-
 Mongoose: MongoDB object data modeling (ODM) for Node.js.
-
 Redis: In-memory data store, used for caching.
-
 bcrypt: Library for hashing passwords.
-
 jsonwebtoken (JWT): For implementing token-based authentication.
-
 axios: Promise-based HTTP client for making API requests (e.g., to NewsAPI.org).
-
 dotenv: For loading environment variables from a .env file.
-
 express-validator: Middleware for request input validation.
-
 nodemon: Utility that monitors for changes in your source and automatically restarts your server (for development).
-
 supertest: A library for testing HTTP servers.
-
 tap: A test harness for Node.js.
 
-Installation
+**Installation**
 To set up and run the News Aggregator API locally, follow these steps:
 
 Prerequisites
 Node.js: Version 18.0.0 or higher.
-
 npm (Node Package Manager) or yarn.
-
 MongoDB: A running MongoDB instance (local or cloud-hosted, e.g., MongoDB Atlas).
-
 Redis: A running Redis instance (local or cloud-hosted).
-
 Git: For cloning the repository.
 
-Clone the Repository
+**Clone the Repository**
 git clone <your-repository-url> # Replace with your actual repository URL
 cd news-aggregator-api
 
-Environment Variables
+**Environment Variables**
 Create a .env file in the root directory of the project and add the following environment variables. Replace the placeholder values with your actual credentials and configurations.
 
 PORT=3000
@@ -108,20 +90,20 @@ JWT_SECRET=your_super_secret_jwt_key # Use a strong, random string
 REDIS_URL=redis://localhost:6379 # Or your cloud Redis URL
 NEWS_API_KEY=YOUR_NEWSAPI_API_KEY # Get your API key from https://newsapi.org/
 
-Install Dependencies
+**Install Dependencies**
 npm install
 # OR
 yarn install
 
-Running the Application
+**Running the Application**
 To start the development server:
 
-npm start
+npm run start
 # This uses nodemon to automatically restart the server on code changes.
 
 The API will typically run on http://localhost:3000 (or the PORT specified in your .env file).
 
-API Endpoint Documentation
+**API Endpoint Documentation**
 Below is the documentation for the API endpoints, including their methods, paths, and expected behaviors.
 
 1. User Authentication & Management
@@ -139,7 +121,7 @@ Request Body Example:
     "preferences": ["movies", "comics"]
 }
 
-Validation Rules:
+**Validation Rules**:
 
 name: Required, must not be empty.
 
